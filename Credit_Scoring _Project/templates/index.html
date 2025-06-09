@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Risk Predictor</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 20px auto; padding: 20px; }
+        form { display: grid; gap: 10px; }
+        input[type="text"] { padding: 8px; width: 200px; }
+    </style>
+</head>
+<body>
+    <h1>Credit Risk Assessment</h1>
+    
+    <form action="/predict" method="post">
+        <label>Log Income:</label>
+        <input type="text" name="log_income" required>
+        
+        <label>Log Loan Amount:</label>
+        <input type="text" name="log_loan_amount" required>
+        
+        <label>Loan Term (36=0, 60=1):</label>
+        <input type="text" name="term_binary" required>
+        
+        <label>Credit History (0=Bad, 1=Good):</label>
+        <input type="text" name="credit_history" required>
+        
+        <input type="submit" value="Predict Risk" style="width: auto; margin-top: 15px;">
+    </form>
+
+    {% if prediction_text %}
+    <h3 style="color: {% if 'High' in prediction_text %}red{% else %}green{% endif %}; margin-top: 20px;">
+        {{ prediction_text }}
+    </h3>
+    {% endif %}
+</body>
+</html>
