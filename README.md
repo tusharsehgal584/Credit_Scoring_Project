@@ -1,97 +1,106 @@
 # Credit Scoring Project
 
-A machine learning-based project for evaluating credit risk and predicting the creditworthiness of loan applicants. This project demonstrates the end-to-end process of credit scoring using data analysis, feature engineering, and model building.
+A machine learning-powered web app for predicting the credit default risk of loan applicants. Built with Flask and scikit-learn, this project demonstrates the complete workflow of credit scoring—from data analysis and model training to web deployment.
 
 ---
 
-## Features
+## 🚀 Features
 
-- **Exploratory Data Analysis (EDA):** Understands and visualizes the dataset for patterns and insights.
-- **Data Preprocessing:** Handles missing values, encodes categorical variables, and scales features.
-- **Feature Engineering:** Creates new features to improve model performance.
-- **Model Building:** Implements and compares machine learning algorithms for credit scoring.
-- **Evaluation Metrics:** Uses accuracy, confusion matrix, ROC-AUC, and other metrics to assess model performance.
-- **Interpretability:** Analyzes feature importance to understand model decisions.
+- **Credit Default Risk Prediction:** Instantly predicts if an applicant is at high or low risk of defaulting on a loan.
+- **Machine Learning Backend:** Uses a scikit-learn model (`credit_model.pkl`) trained on real loan data.
+- **User-Friendly Web Interface:** Simple HTML form for data entry and result display.
+- **Reusable Structure:** Organized for easy extension and deployment.
 
 ---
 
-## Project Structure
+## 🗂️ Project Structure
+
 
 ![image](https://github.com/user-attachments/assets/203fcf0f-d6b0-452e-9bbb-b458fe78f922)
 
+
 ---
 
-## Getting Started
+## ⚙️ Getting Started
 
 ### Prerequisites
 
 - Python 3.7 or above
-- pip
+- pip (Python package installer)
 
 ### Installation
 
 1. **Clone the repository:**
-git clone https://github.com/tusharsehgal584/Credit_Scoring_Project.git
-cd Credit_Scoring_Project/Credit_Scoring\ _Project
+    ```
+    git clone https://github.com/tusharsehgal584/Credit_Scoring_Project.git
+    cd Credit_Scoring_Project
+    ```
 
-2. **Install dependencies:**
-pip install -r requirements.txt
+2. **(Optional) Create a virtual environment:**
+    ```
+    python -m venv .venv
+    source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+    ```
 
-3. **Run the Jupyter notebook:**
-jupyter notebook notebooks/Credit_Scoring_Model(2).ipynb
+3. **Install dependencies:**
+    ```
+    pip install -r requirement.txt
+    ```
 
----
-
-## Usage
-
-- Open the notebook and follow step-by-step instructions for:
-- Data loading and exploration
-- Preprocessing and feature engineering
-- Model training and evaluation
-- Interpreting results
-
-- Modify source scripts in the `src/` directory for custom experiments.
-
----
-
-## Dataset
-
-- The dataset contains anonymized customer information, credit history, and loan status.
-- Typical features include: age, income, employment status, credit history, loan amount, and repayment status.
+4. **Run the application:**
+    ```
+    python app.py
+    ```
+    The app will be available at [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
 ---
 
-## Models Used
+## 💻 Usage
 
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- (You can add/remove models as per your implementation)
-
----
-
-## Evaluation Metrics
-
-- Accuracy
-- Confusion Matrix
-- ROC-AUC Score
-- Precision, Recall, F1-Score
+1. Open your browser and go to [http://127.0.0.1:8080](http://127.0.0.1:8080).
+2. Enter applicant details (Log of Income, Log of Loan Amount, Term, Credit History).
+3. Click **Predict** to see if the applicant is at "High Default Risk" or "Low Default Risk".
 
 ---
 
-## Contributing
+## 📊 Model & Data
 
-Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
+- **Dataset:** `data/loan_data.csv`  
+  Contains historical loan applicant data used for model training.
+- **Model:** `model/credit_model.pkl`  
+  A scikit-learn model (e.g., Logistic Regression, Decision Tree, etc.) trained to classify credit risk.
+- **Notebook:**  
+  Model training and evaluation steps are documented in `notebook/Credit_Scoring_Model (2).ipynb`.
 
 ---
 
-## License
+## 📝 File Descriptions
 
-This project is licensed under the MIT License.
+- `app.py` – Main Flask web application for prediction.
+- `model/credit_model.pkl` – Pre-trained credit scoring model (pickle format).
+- `templates/index.html` – HTML template for user input and result display.
+- `data/loan_data.csv` – Dataset used for model training.
+- `notebook/Credit_Scoring_Model (2).ipynb` – Jupyter notebook for data exploration and model building.
+- `requirement.txt` – List of required Python packages.
 
 ---
 
-## Author
+## 🤝 Contributing
 
-[Tushar Sehgal](https://github.com/tusharsehgal584)
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+- [Tushar Sehgal](https://github.com/tusharsehgal584)
+- Student at Amity University, Greater Noida
+
+---
 
